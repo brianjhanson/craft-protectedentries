@@ -1,0 +1,49 @@
+{
+    "name": "brianjhanson/craft-protected-entries",
+    "description": "Require a password to access certain entries",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "protected entries"
+    ],
+    "support": {
+        "docs": "https://github.com/brianjhanson/protected-entries/blob/master/README.md",
+        "issues": "https://github.com/brianjhanson/protected-entries/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brian Hanson",
+            "homepage": "https://brianhanson.net"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "require-dev": {
+      "craftcms/cms": "^3.2.0",
+      "codeception/codeception": "^3.0",
+      "vlucas/phpdotenv": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "brianjhanson\\protectedentries\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Protected Entries",
+        "handle": "protected-entries",
+        "developer": "Brian Hanson",
+        "developerUrl": "https://brianhanson.net",
+        "documentationUrl": "https://github.com/brianjhanson/protected-entries/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/brianjhanson/protected-entries/master/CHANGELOG.md",
+        "components": {
+            "protectedEntriesService": "brianjhanson\\protectedentries\\services\\ProtectedEntriesService"
+        },
+        "class": "brianjhanson\\protectedentries\\ProtectedEntries"
+    }
+}

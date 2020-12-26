@@ -1,0 +1,32 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Protected Entries plugin for Craft CMS 3.x
+ *
+ * Protected Entries index.twig
+ *
+ * @author    Brian Hanson
+ * @copyright Copyright (c) 2020 Brian Hanson
+ * @link      https://brianhanson.net
+ * @package   ProtectedEntries
+ * @since     1.0.0
+ */
+#}
+
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% set title = "Protected Entries" %}
+{% set fullPageForm = true %}
+
+{% set content %}
+  {{ actionInput('protected-entries/global/save') }}
+
+  {{ forms.textField({
+    label: 'Entry Password',
+    instructions: 'When an entry is password protected, this password will unlockit',
+    id: 'password',
+    name: 'password',
+    value: settings['password'] ?? '',
+  }) }}
+{% endset %}
